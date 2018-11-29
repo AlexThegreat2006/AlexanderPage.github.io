@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HangMan</title>
+</head>
+
+<body>
+	<h1>Hang Men</h1>
+	<pre>
+    |----|
+    O    |
+   ---   |            0 - yay    O - dont worry honey, the poor man didnt have robux
+    |    |           \|/     0  /|\
+   / \   |            |     /|// | 
+         |            |      |   |
+      ___|___        / \    / \ / \
+		
+		
+	</pre>
+	<script>
+	
+	//creat an array of words
+		var words = [
+			"death",
+			"no",
+			"pneumonoultramicroscopicsi",
+			"donkey",
+			"shrek",
+			"fiona",
+			"farquad",
+			"yay",
+			"thiccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+		];
+		
+		//pick a random word
+		var word = words[Math.floor(Math.random() * words.length)];
+		var answerArray = [];
+		for (var i = 0; i < word.length; i++) {
+			answerArray[i] = "_"
+		}
+		
+		var remaningLetters = word.length
+		while (remaningLetters > 0) {
+			// Game code goes here
+			// Show the player their progress
+			// Take input from the player 
+			// Update answerArray and remainigLetters for very very correct geuss
+		alert(answerArray.join(" "));
+		var guess = prompt ("guess a letter or get out.");
+		if (guess === null) {
+			// exit game loop
+			break;
+		} else if (guess.length !== 1) {
+		alert("enter 1 letter what do you think your doing")
+		} else {
+			// update game with guess
+		}
+		for (var j = 0; j < word.length; j++) {
+			if (word[j] === guess) {
+				answerArray[j] = guess;
+				remainingLetters--;
+			}
+		}
+		
+		}
+		
+		alert(answerArray.join(" "));
+		alert("how did you get" + word +"?");
+	</script>
+</body>
+</html>
